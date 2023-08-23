@@ -1,1 +1,10 @@
+name: Compile Turbo C++ Code
 
+on:
+  push:
+    branches:
+      - main  # Change this to the branch you want to trigger the workflow
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
