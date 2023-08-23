@@ -1,5 +1,3 @@
-sudo apt update
-sudo apt install dosbox -y
 cd ~
 git clone --depth 1 https://github.com/uditkarode/ucc.git
 sudo mv ucc/ucc /bin/ucc
