@@ -31,14 +31,12 @@ jobs:
         run: |
           sudo apt update
           sudo apt install dosbox -y
-          mkdir /home/runner/UCCRoot/
-          mkdir /home/runner/UCCRoot/sources
-          cp ${{ github.event.inputs.source_file }} /home/runner/UCCRoot/sources
           wget https://github.com/sounddrill31/Learning-C/raw/actions/script.sh
           chmod +x script.sh
           ./script.sh
       - name: Compile
         run: |
+          cp ${{ github.event.inputs.source_file }} /home/runner/UCCRoot/sources
           ucc -b ${{ github.event.inputs.source_file }}
      # - name: Install DosBox-X
      #   run: sudo snap install dosbox-x
