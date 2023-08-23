@@ -69,5 +69,5 @@ jobs:
         with:
           files: |
             /home/runner/UCCRoot/builds/*
-          tag_name: ${{ github.event.inputs.source_file }}UCC
+          tag_name: ${{ github.event.inputs.source_file }}
           name: Compiled Code
