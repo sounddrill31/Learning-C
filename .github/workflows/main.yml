@@ -71,6 +71,6 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           files: |
-            /home/runner/UCCRoot/builds/*
+            /home/runner/UCCRoot/builds/*.EXE
           tag_name: ${{ github.event.inputs.output_tag }}
           name: Compiled Code
