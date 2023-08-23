@@ -7,9 +7,6 @@ on:
         description: 'Branch to trigger the workflow'
         required: true
         default: 'main'
-      exe_file:
-        description: '.exe file name'
-        required: true
       source_file:
         description: 'Source file name'
         required: true
@@ -60,7 +57,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: compiled-binary
-          path: ~/builds/${{ github.event.inputs.exe_file }}
+          path: /home/runner/builds/*
 
   create_release:
     needs: build
@@ -71,6 +68,6 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           files: |
-            ${{ github.workspace }}/${{ github.event.inputs.exe_file }}
-          tag_name: ${{ github.event.inputs.source_file }}
+            /home/runner/builds/*
+          tag_name: ${{ github.event.inputs.source_file }}UCC
           name: Compiled Code
