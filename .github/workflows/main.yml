@@ -32,7 +32,7 @@ jobs:
             CD SRC
             TCC ${{ github.event.inputs.source_file }} -o ${{ github.event.inputs.exe_file }}
           programs: |
-             $/turbo-c++/3.00/BIN:C:\TCC
+             $/turbo-c++/3.00:C:\TCC
              sample:C:\SRC
       - name: Collect compiled output
         run: |
