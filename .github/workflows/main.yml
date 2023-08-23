@@ -38,7 +38,7 @@ jobs:
 
       - name: Compile code in DOSBox
         run: |
-          dosbox -c "mount c /workspace" -c "c:" -c "cd c:\" -c "compile.bat"
+                    dosbox -c "mount c /workspace" -c "c:" -c "cd c:\ && compile.bat"
         
       - name: Collect compiled output
         run: |
