@@ -29,6 +29,8 @@ jobs:
           ref: ${{ github.event.inputs.branch }}
       - name: Setup UCC Compiler
         run: |
+          sudo apt update
+          sudo apt install dosbox -y
           mkdir ~/sources
           cp ${{ github.event.inputs.source_file }} ~/sources/
           wget https://github.com/sounddrill31/Learning-C/raw/actions/script.sh
