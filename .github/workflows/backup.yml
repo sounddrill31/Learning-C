@@ -60,5 +60,5 @@ jobs:
         with:
           files: |
             ${{ github.workspace }}/${{ github.event.inputs.exe_file }}
-          tag_name: ${{ github.event.inputs.source_file }}
+          tag_name: ${{ github.event.inputs.source_file }}tag
           name: Compiled Code
