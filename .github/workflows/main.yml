@@ -10,6 +10,9 @@ on:
       source_file:
         description: 'Source file name'
         required: true
+      output_tag:
+        description: 'Tag for Release'
+        required: true
 
 jobs:
   build:
@@ -69,5 +72,5 @@ jobs:
         with:
           files: |
             /home/runner/UCCRoot/builds/*
-          tag_name: ${{ github.event.inputs.source_file }}
+          tag_name: ${{ github.event.inputs.output_tag }}
           name: Compiled Code
