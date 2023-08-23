@@ -1,4 +1,4 @@
-name: Compile Turbo C++ Code
+name: Dummy Makefile
 
 on:
   push:
