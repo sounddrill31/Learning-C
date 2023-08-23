@@ -27,6 +27,8 @@ jobs:
         uses: actions/checkout@v2
         with:
           ref: ${{ github.event.inputs.branch }}
+      - name: Install DosBox-X
+        run: sudo snap install dosbox-x
       - name: Compile Code
         uses: joncloud/dos-build-action@v1
         with:
