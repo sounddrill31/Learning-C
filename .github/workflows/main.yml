@@ -36,7 +36,7 @@ jobs:
           ./script.sh
       - name: Compile
         run: |
-        ucc -b ${{ github.event.inputs.source_file }}
+          ucc -b ${{ github.event.inputs.source_file }}
      # - name: Install DosBox-X
      #   run: sudo snap install dosbox-x
      # - name: Compile Code
