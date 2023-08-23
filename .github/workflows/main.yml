@@ -57,7 +57,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: compiled-binary
-          path: /home/runner/builds/*
+          path: /home/runner/UCCRoot/builds/*
 
   create_release:
     needs: build
@@ -68,6 +68,6 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           files: |
-            /home/runner/builds/*
+            /home/runner/UCCRoot/builds/*
           tag_name: ${{ github.event.inputs.source_file }}UCC
           name: Compiled Code
