@@ -23,23 +23,17 @@ jobs:
         uses: actions/checkout@v2
         with:
           ref: ${{ github.event.inputs.branch }}
-
-      - name: Install DOSBox
-        run: |
-          sudo apt-get update
-          sudo apt-get install dosbox -y
-
-      - name: Create batch script
-        run: |
-          echo 'mount c /workspace' > compile.bat
-          echo 'c:' >> compile.bat
-          echo 'cd c:\' >> compile.bat
-          echo 'tcc ${{ github.event.inputs.source_file }} -o ${{ github.event.inputs.exe_file }}' >> compile.bat
-
-      - name: Compile code in DOSBox
-        run: |
-                dosbox -noconsole -c "mount c /workspace" -c "c:" -c "cd c:\ && compile.bat"
-        
+      - name: Compile Code
+        uses: joncloud/dos-build-action@v1
+        with:
+          run:
+              |
+            C:
+            CD SRC
+            TCC ${{ github.event.inputs.source_file }} -o ${{ github.event.inputs.exe_file }}
+          programs: |
+             $/turbo-c++/3.00/BIN:C:\TCC
+             sample:C:\SRC
       - name: Collect compiled output
         run: |
           cp /workspace/${{ github.event.inputs.exe_file }} $GITHUB_WORKSPACE/${{ github.event.inputs.exe_file }}
