@@ -70,7 +70,6 @@ jobs:
         id: create_release
         uses: softprops/action-gh-release@v1
         with:
-          files: |
-            /home/runner/UCCRoot/builds/*.EXE
+          files: /home/runner/UCCRoot/builds/*.EXE
           tag_name: ${{ github.event.inputs.output_tag }}
           name: Compiled Code
