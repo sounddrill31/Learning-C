@@ -36,7 +36,7 @@ jobs:
               |
             C:
             CD SRC
-            TCC ${{ github.event.inputs.source_file }} -o ${{ github.event.inputs.exe_file }}
+            TCC ${{ github.event.inputs.source_file }} 
           programs: |
              $/turbo-c++/3.00:C:\TCC
              sample:C:\SRC
