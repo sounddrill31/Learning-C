@@ -40,9 +40,9 @@ jobs:
           programs: |
              $/turbo-c++/3.00:C:\TCC
              sample:C:\SRC
-      - name: Collect compiled output
-        run: |
-          cp /workspace/${{ github.event.inputs.exe_file }} $GITHUB_WORKSPACE/${{ github.event.inputs.exe_file }}
+      #- name: Collect compiled output
+      #  run: |
+      #    cp /workspace/${{ github.event.inputs.exe_file }} $GITHUB_WORKSPACE/${{ github.event.inputs.exe_file }}
       - name: Setup Upterm Session
         uses: lhotari/action-upterm@v1
       - name: Upload compiled binary
