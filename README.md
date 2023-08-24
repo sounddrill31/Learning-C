@@ -2,4 +2,4 @@
 Learning C with Turbo C++
 
 
-Template
+Simple calculator using if else if
