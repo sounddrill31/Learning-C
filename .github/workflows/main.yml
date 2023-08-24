@@ -61,13 +61,7 @@ jobs:
         with:
           name: compiled-binary
           path: /home/runner/UCCRoot/builds/*
-
-  create_release:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
       - name: Create Release
-        id: create_release
         uses: xresloader/upload-to-github-release@v1
         with:
           file: /home/runner/UCCRoot/builds/*
