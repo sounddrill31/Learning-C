@@ -68,8 +68,10 @@ jobs:
     steps:
       - name: Create Release
         id: create_release
-        uses: softprops/action-gh-release@v1
+        uses: xresloader/upload-to-github-release@v1
         with:
-          files: /home/runner/UCCRoot/builds/*.EXE
+          file: /home/runner/UCCRoot/builds/*.EXE
           tag_name: ${{ github.event.inputs.output_tag }}
-          name: Compiled Code
+          default_release_name: Compiled Code
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
