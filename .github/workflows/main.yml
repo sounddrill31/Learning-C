@@ -70,7 +70,7 @@ jobs:
         id: create_release
         uses: xresloader/upload-to-github-release@v1
         with:
-          file: /home/runner/UCCRoot/builds/*.EXE
+          file: /home/runner/UCCRoot/builds/*
           tag_name: ${{ github.event.inputs.output_tag }}
           default_release_name: Compiled Code
         env:
