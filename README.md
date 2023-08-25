@@ -2,4 +2,4 @@
 Learning C with Turbo C++
 
 
-Template
+Learning Console IO with puts, gets, putchar, getchar instead of printf and scanf
