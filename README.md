@@ -2,4 +2,5 @@
 Learning C with Turbo C++
 
 
-Template
+Learning about ternary operations!
+
