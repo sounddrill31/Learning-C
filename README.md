@@ -2,4 +2,4 @@
 Learning C with Turbo C++
 
 
-Template
+Calculating Simple Interest using (p*r*t)/100 formula with user input
