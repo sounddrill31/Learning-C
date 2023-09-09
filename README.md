@@ -2,4 +2,4 @@
 Learning C with Turbo C++
 
 
-Template
+Find Square and root using user provided variable, user also gets to choose the operation
