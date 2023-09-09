@@ -2,4 +2,4 @@
 Learning C with Turbo C++
 
 
-Template
+Calculate perimeter and area with user inputed values and user selected operations
