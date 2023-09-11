@@ -2,4 +2,4 @@
 Learning C with Turbo C++
 
 
-Template
+Practicing gets and puts 
