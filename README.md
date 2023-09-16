@@ -2,4 +2,4 @@
 Learning C with Turbo C++
 
 
-Template
+Simple for loop to take input for the number of times to be repeated and also prints out user input text
